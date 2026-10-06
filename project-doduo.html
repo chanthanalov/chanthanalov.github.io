@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tech4Change · Chanthana Lov</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="img/jpg" href="img/tab-icon.jpg" class="icon">
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="templates.css">
+</head>
+<body>
+<div class="wrap">
+<nav><a class="logo" href="index.html" style="margin:0">chanthana.lov</a><div><a href="index.html#about">about</a><a href="index.html#skills">skills</a><a href="index.html#projects">projects</a></div></nav>
+
+<header class="page-head">
+<div class="crumbs"><a href="index.html">home</a> / <a href="index.html#projects">projects</a> / Tech4Change</div>
+<h1>Tech4Change · <em>Team Doduo </em></h1>
+<p class="lead">A one-line summary of what you built and why.</p>
+<div class="meta"><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">2025</span></div>
+<div class="btns"><a class="btn p" href="https://www.youtube.com/watch?v=dhfe5XSpXhc">View Solution</a><a class="btn" href="#">View code</a></div>
+</header>
+
+<div class="slider" aria-roledescription="carousel">
+  <div class="slides">
+    <img src="img/tech4change-1.jpg" alt="Screenshot 1">
+    <img src="img/tech4change-2.jpg" alt="Screenshot 2">
+    <img src="img/tech4change-3.jpeg" alt="Screenshot 3" style="object-position: 50% 60%;">
+  </div>
+  <button class="nav-btn prev" aria-label="Previous">‹</button>
+  <button class="nav-btn next" aria-label="Next">›</button>
+  <div class="dots"></div>
+</div>
+
+<section>
+<h2><span>01</span>Overview</h2>
+<div class="prose"><p>What the project is, the problem it solves, and what inspired it.</p></div>
+</section>
+
+<section>
+<h2><span>02</span>How it works</h2>
+<div class="prose">
+<p>Explain the approach, including any maths or algorithms behind it.</p>
+<ul><li>Key feature one</li><li>Key feature two</li><li>Key feature three</li></ul>
+</div>
+</section>
+
+<section>
+<h2><span>03</span>What I learned</h2>
+<div class="prose"><p>Challenges, mistakes and what you'd do differently next time.</p></div>
+</section>
+
+<div class="pager"><a class="btn" href="index.html#projects">← All projects</a><a class="btn" href="#">Next project →</a></div>
+
+<footer><span>© 2025 Chanthana Lov. All rights reserved.</span><span>Brisbane · University of Queensland</span></footer>
+</div>
+</body>
+
+<script>
+document.querySelectorAll('.slider').forEach(function(s){
+  var track=s.querySelector('.slides'),n=track.children.length,i=0,dots=s.querySelector('.dots'),x0=null;
+  for(var k=0;k<n;k++){(function(k){var b=document.createElement('button');b.setAttribute('aria-label','Go to slide '+(k+1));b.onclick=function(){go(k)};dots.appendChild(b)})(k)}
+  function go(j){
+    i=(j+n)%n;
+    track.style.transform='translateX(-'+i*100+'%)';
+    [].forEach.call(dots.children,function(d,k){d.classList.toggle('on',k===i)});
+  }
+  s.querySelector('.prev').onclick=function(){go(i-1)};
+  s.querySelector('.next').onclick=function(){go(i+1)};
+  s.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')go(i-1);if(e.key==='ArrowRight')go(i+1)});
+  s.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  s.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(i+(dx<0?1:-1));x0=null});
+  go(0);
+});
+</script>
+
+</html>

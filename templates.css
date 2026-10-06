@@ -1,0 +1,27 @@
+/* Extra styles for template pages. Load AFTER style.css */
+nav a.on{color:var(--acc)}
+.page-head{padding:44px 0 46px}
+.page-head h1{font-size:clamp(34px,6vw,56px);margin:10px 0 14px}
+.crumbs{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--mut)}
+.crumbs a{color:var(--acc);text-decoration:none}
+.prose{max-width:44em}
+.prose h3{font-family:Fraunces,Georgia,serif;font-size:22px;margin:30px 0 6px}
+.prose p{margin:0 0 14px;color:var(--mut)}
+.prose ul{color:var(--mut);padding-left:20px}
+.prose li{margin-bottom:6px}
+.prose a{color:var(--acc)}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.shot{aspect-ratio:16/9;border:2px dashed var(--line);display:flex;align-items:center;justify-content:center;color:var(--mut);font-family:'JetBrains Mono',monospace;font-size:13px;margin:28px 0;overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover}
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:30px 0;border-top:1px solid var(--line)}
+
+.slider{position:relative;margin:28px 0;overflow:hidden;border:1px solid var(--line);background:var(--card);aspect-ratio:16/9}
+.slides{display:flex;height:100%;transition:transform .5s ease}
+.slides img{flex:0 0 100%;width:100%;height:100%;object-fit:cover}
+.nav-btn{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border:0;border-radius:50%;background:var(--bg);color:var(--fg);font-size:26px;line-height:1;cursor:pointer;opacity:.85;transition:background .15s,color .15s}
+.nav-btn:hover{background:var(--acc);color:#fff}
+.prev{left:12px}.next{right:12px}
+.dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:8px}
+.dots button{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:var(--fg);opacity:.35;cursor:pointer}
+.dots button.on{background:var(--acc);opacity:1}
+@media(prefers-reduced-motion:reduce){.slides{transition:none}}

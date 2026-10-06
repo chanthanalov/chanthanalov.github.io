@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Movesets · Chanthana Lov</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="templates.css">
+<link rel="stylesheet" href="moves.css">
+</head>
+<body>
+<div class="wrap">
+<nav><a class="logo" href="index.html" style="margin:0">chanthana.lov</a><div><a href="index.html#about">about</a><a href="index.html#skills">skills</a><a href="index.html#projects">projects</a><a class="on" href="moves.html">moves</a></div></nav>
+
+<header class="page-head">
+<div class="crumbs"><a href="index.html">home</a> / movesets</div>
+<h1>My <em>movesets</em></h1>
+<p class="lead">A collection of combos from karate and tricking. Each one is a sequence I'm drilling or have put together.</p>
+<div class="filters" id="filters">
+<button class="on" data-f="all">All</button>
+<button data-f="karate">Karate</button>
+<button data-f="tricking">Tricking</button>
+<button data-f="combo">Mixed</button>
+</div>
+</header>
+
+<!-- SAMPLE CARDS: replace the names, moves and notes with your own -->
+<div class="moves" id="moves">
+
+<article class="move" data-cat="karate">
+<div class="move-top"><small>KARATE</small><span class="lvl" title="Difficulty">●●○○○</span></div>
+<h3>Bassai So</h3>
+
+<div class="seq">
+  <span>Mae geri</span><i>→</i><span>Mawashi geri</span><i>→</i><span>Gyaku zuki</span>
+</div>
+<div class="clip"><video src="img/movesets/bassai-so.MP4" controls muted loop playsinline></video></div>
+<p>Notes: what to focus on, such as hip rotation, balance or timing.</p>
+</article>
+
+<article class="move" data-cat="karate">
+<div class="move-top"><small>KARATE</small><span class="lvl" title="Difficulty">●●●○○</span></div>
+<h3>Reverse counter</h3>
+<div class="seq"><span>Gedan barai</span><i>→</i><span>Gyaku zuki</span><i>→</i><span>Ushiro geri</span></div>
+<div class="clip"><span>video / gif here</span></div>
+<p>Notes: your own tips for this one.</p>
+</article>
+
+<article class="move" data-cat="tricking">
+<div class="move-top"><small>TRICKING</small><span class="lvl" title="Difficulty">●●●●○</span></div>
+<h3>Flow combo one</h3>
+<div class="seq">
+  <span>Pop 360</span><i>→</i><span>Outside Crescent</span><i>→</i><span>Tornado Kick</span>
+  <i>→</i><span>Spin Hook</span><i>→</i><span>Scoot</span><i>→</i><span>???</span><i>→</i><span>Forward Roll</span>
+  <i>→</i><span>Back Kick</span><i>→</i><span>Jump Side Kick</span><i>→</i><span>Stretch Kick into Splits</span>
+</div>
+<div class="clip"><video src="img/movesets/hs-combo.MP4" controls muted loop playsinline></video></div>
+<p>Notes: landing, setup, what you're working on next.</p>
+</article>
+
+<article class="move" data-cat="combo">
+<div class="move-top"><small>MIXED</small><span class="lvl" title="Difficulty">●●●○○</span></div>
+<h3>Kata into flip</h3>
+<div class="seq"><span>Mawashi geri</span><i>→</i><span>Spin</span><i>→</i><span>Gainer</span></div>
+<div class="clip"><span>video / gif here</span></div>
+<p>Notes: how you blend the styles together.</p>
+</article>
+
+</div>
+
+<div class="pager"><a class="btn" href="index.html">← Home</a><a class="btn" href="#">Back to top ↑</a></div>
+
+<footer><span>© 2025 Chanthana Lov. All rights reserved.</span><span>Brisbane · University of Queensland</span></footer>
+</div>
+
+<script>
+var btns=document.querySelectorAll('#filters button'),cards=document.querySelectorAll('#moves .move');
+btns.forEach(function(b){b.onclick=function(){
+  btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+  cards.forEach(function(c){c.hidden=!(b.dataset.f==='all'||c.dataset.cat===b.dataset.f)});
+}});
+</script>
+</body>
+</html>

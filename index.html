@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chanthana Lov · Mathematics, Code & Martial Arts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="img/jpg" href="img/tab-icon.jpg" class="icon">
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<nav>
+    <span class="logo">chanthana.lov</span>
+    <div>
+        <a href="#about">about</a>
+        <a href="#skills">skills</a>
+        <a href="#projects">projects</a>
+        <a href="moves.html">moves</a>
+    </div>
+</nav>
+
+<header class="hero">
+<div>
+<div class="tag">// MATHS · CODE · MARTIAL ARTS</div>
+<h1>Adapt what is <em>useful</em><br>Reject what is <em>useless</em> &<br>Add what is specifically <em>your own</em></h1>
+
+<p class="lead"><i>-Bruce Lee (Martial Artist, Philosopher)</i></p>
+<div class="btns"><a class="btn p" href="#projects">See my work</a><a class="btn" href="https://chanthanalov.github.io/arcade.html">Play the arcade</a></div>
+</div>
+
+<div class="photo">
+  <img src="img/break1.jpg" class="active" alt="Chanthana">
+  <img src="img/break2.jpg" alt="Chanthana training">
+  <img src="img/break3.jpg" alt="Chanthana">
+</div>
+</label>
+</header>
+
+<section id="about">
+<h2><span>01</span>About me</h2>
+<div class="two">
+<p>Hi, I'm Chanthana, a second year Mathematics and Computer Science student at the University of Queensland, exploring where technology, mathematics and creativity meet. I love the moment a messy problem turns elegant, whether it's a proof falling into place or a program finally behaving. Studying maths and computer science together lets me chase both: the rigour of theory and the fun of building things people can use.</p>
+<p>Away from the desk I train in martial arts and stay active. The mindset carries over: show up daily, refine the fundamentals, and treat every failed attempt as data. I'm hoping to bring these interests together to create innovative solutions and express my creativity.</p>
+</div>
+<div class="eq">∀ practice ∃ improvement &nbsp;·&nbsp; lim (reps → ∞) skill = mastery</div>
+</section>
+
+<section id="skills">
+<h2><span>02</span>Skills</h2>
+<p style="color:var(--mut);margin:0">Tools I've picked up so far.</p>
+<div class="chips">
+<span class="chip">Python</span>
+<span class="chip">JavaScript</span>
+<span class="chip">TypeScript</span>
+<span class="chip">Java</span>
+<span class="chip">R</span>
+<span class="chip">React Native</span>
+<span class="chip">HTML5</span>
+<span class="chip">CSS3</span>
+
+<span class="chip">Tang Soo Do Karate</span>
+<span class="chip">Taekwondo</span>
+<span class="chip">Tricking</span>
+<span class="chip">Siebel</span>
+</div>
+</section>
+
+<section id="projects">
+<h2><span>03</span>Projects</h2>
+<p style="color:var(--mut);margin:0">Hackathons, Personal Projects/Demonstrations, and More!</p>
+
+<div class="grid">
+<a class="card" href="/project-doduo.html"><small>HACKATHON 01</small><b>Tech4Change</b>
+    <p>Helping Culturally and Linguistically Diverse Communities become disaster-ready through technology.</p> 
+    <em>People's Choice Award</em>
+</a>
+<a class="card" href="/project-defendher.html"><small>HACKATHON 02</small><b>DefendHer</b><p>A self-defense learning website with performance grading.</p></a>
+<a class="card tbc"><small>HACKATHON 03</small><b>TBC</b><p></p></a>
+
+
+<a class="card" href="https://youtu.be/8yMq4xq-YR0?si=B5_LCOfG8OYiEEMn&t=1759"><small>KARATE DEMONSTRATION 01</small><b>Talent Show 2021</b><p>Something in the works.</p>
+<em>2nd Place</em></a>
+<a class="card" href="https://youtu.be/-VraNW1GUNI?si=Wn425DeWErQCpDhj&t=1177"><small>KARATE DEMONSTRATION 02</small><b>Talent Show 2024</b><p>Something in the works.</p>
+<em>1st Place</em></a>
+<a class="card"><small>KARATE DEMONSTRATION 03</small><b>UQ's Got Talent 2025</b><p>Something in the works.</p></a> <!-- Make a page-->
+
+
+<a class="card tbc"><small>PROJECT 01</small><b>Chanthana's Arcade</b><p>Something in the works.</p></a>
+<a class="card tbc"><small>PROJECT 02</small><b>Coming soon</b><p>Something in the works.</p></a>
+<a class="card tbc"><small>PROJECT 03</small><b>Coming soon</b><p>Something in the works.</p></a>
+
+</div>
+</section>
+
+<footer><span>© 2026 Chanthana Lov. All rights reserved.</span><span>Brisbane · University of Queensland</span></footer>
+</div>
+
+<script>
+var slides=document.querySelectorAll('.photo img'),i=0;
+if(slides.length>1){
+  setInterval(function(){
+    slides[i].classList.remove('active');
+    i=(i+1)%slides.length;
+    slides[i].classList.add('active');
+  },1500);
+}
+</script>
+</body>
+</html>
