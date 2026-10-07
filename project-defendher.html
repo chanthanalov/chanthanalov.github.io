@@ -18,16 +18,29 @@
 <header class="page-head">
 <div class="crumbs"><a href="index.html">home</a> / <a href="index.html#projects">projects</a> / DefendHer</div>
 <h1>DefendHer · <em>Team Karate Kids</em></h1>
-<p class="lead">A one-line summary of what you built and why.</p>
-<div class="meta"><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">2025</span></div>
-<div class="btns"><a class="btn p" href="#">Live demo</a><a class="btn" href="#">View code</a></div>
+<p class="lead">DefendHer is made by women, with the goal of empowering other women to learn self-defence.
+  <br><br>
+  Created by: Amy Clinton, Catherine Zhao, Chanthana Lov, Crystal Wang, Daisy Thurlby, Elyse Ng.
+</p>
+<div class="meta">
+  <span class="chip">Python</span>
+  <span class="chip">FastAPI</span>
+  <span class="chip">MediaPipe</span>
+  <span class="chip">scikit-learn</span>
+  <span class="chip">JavaScript</span>
+  <span class="chip">HTML/CSS</span>
+
+
+
+</div>
+<div class="btns"><a class="btn" href="https://github.com/elyse-ng/defendHer/tree/main">View code</a></div>
 </header>
 
 <div class="slider" aria-roledescription="carousel">
   <div class="slides">
     <img src="img/IMG_5511.JPG" alt="Screenshot 1">
     <img src="img/IMG_5227.JPG" alt="Screenshot 2">
-    <img src="img/defenderher-demo.jpeg" alt="Screenshot 3" style="object-position: 50% 60%;">
+    <img src="img/IMG_7507.JPG" alt="Screenshot 3">
   </div>
   <button class="nav-btn prev" aria-label="Previous">‹</button>
   <button class="nav-btn next" aria-label="Next">›</button>
@@ -36,25 +49,47 @@
 
 <section>
 <h2><span>01</span>Overview</h2>
-<div class="prose"><p>What the project is, the problem it solves, and what inspired it.</p></div>
+<div class="prose"><p>Three hours before the hackathon, I remember brainstorming with the team about potential projects. 
+  We started small with ideas like study companions, but we wanted to make the most of the experience and build something we genuinely cared about.
+  <br><br>
+
+  I kept coming back to martial arts. Its been a major part of my life since I was young, but more importantly, its principles have shaped the way I approach challenges and learning. 
+  Having also taught martial arts, I wanted to share something I was genuinely passionate about while drawing on what I had learned as both a student and an instructor.
+  That became the starting point for DefendHer.
+</p></div>
 </section>
 
 <section>
 <h2><span>02</span>How it works</h2>
 <div class="prose">
-<p>Explain the approach, including any maths or algorithms behind it.</p>
-<ul><li>Key feature one</li><li>Key feature two</li><li>Key feature three</li></ul>
+<p>DefenderHer turns a recorded movement into data that can be analysed by a machine-learning model.</p>
+<ul>
+  <li>01 - Learn: Users first learn the basics of self-defence through instructional videos and guided practice.</li>
+  <li>02 - Record: Users then record their movements using their device's camera.</li>
+  <li>03 - Track: MediaPipe Pose Landmarker processes the video frame by frame, identifying 33 body landmarks for each frame. These landmarks are converted into numerical data representing the user's body position and movement.</li>
+  <li>04 - Classify: The landmark data is passed into a Random Forest classifier, trained on around 400 labelled training videos containing examples of correct and incorrect technique.</li>
+  <li>05 - Feedback: The model predicts whether each frame represents good or bad technique. These predictions are combined using majority voting to determine the overall classification, and the model's prediction probabilities are averaged to produce a confidence score for that classification.</li>
+</ul>
 </div>
 </section>
 
 <section>
 <h2><span>03</span>What I learned</h2>
-<div class="prose"><p>Challenges, mistakes and what you'd do differently next time.</p></div>
+<div class="prose"><p>
+DefendHer was a project where I learned as much about collaboration as I did about technology. 
+It was our first time working with machine learning, and figuring out how to apply it to a real-world problem was a new challenge for all of us.
+<br><br>
+Being the only person on the team with a martial arts background gave me the opportunity to explain techniques and concepts from the ground up, while also learning how to communicate my ideas to people with very different levels of familiarity with the subject. 
+Working as a team also taught me to be flexible and open to different perspectives as the project developed.
+<br><br>
+One of my biggest takeaways was that a strong idea is only the beginning. Building something with a team means learning how to communicate your vision while also making space for other ideas and adapting as the project evolves.
+
+</p></div>
 </section>
 
 <div class="pager"><a class="btn" href="index.html#projects">← All projects</a><a class="btn" href="#">Next project →</a></div>
 
-<footer><span>© 2025 Chanthana Lov. All rights reserved.</span><span>Brisbane · University of Queensland</span></footer>
+<footer><span>© 2026 Chanthana Lov. All rights reserved.</span><span>Brisbane · University of Queensland</span></footer>
 </div>
 </body>
 
